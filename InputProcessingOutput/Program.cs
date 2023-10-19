@@ -12,13 +12,13 @@ Saída de Dados: Uma mensagem coerente e bem formatada deve ser exibida na tela 
 
 // input
 Console.WriteLine("Digite a potência da lâmpada (em watts):");
-int power = int.Parse(Console.ReadLine());
+int power = int.TryParse(Console.ReadLine(), out power) ? power : 0;
 
 Console.WriteLine("Digite a largura do cômodo:");
-int width = int.Parse(Console.ReadLine());
+int width = int.TryParse(Console.ReadLine(), out width) ? width : 0;
 
 Console.WriteLine("Digite o comprimento do cômodo:");
-int length = int.Parse(Console.ReadLine());
+int length = int.TryParse(Console.ReadLine(), out length) ? length : 0;
 
 // processing
 decimal area = width * length;
